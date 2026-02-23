@@ -37,9 +37,39 @@ admin_router = APIRouter(
     dependencies=[Depends(verificar_admin)]
 )
 
-@admin_router.get("")
-def admin_home():
-    return {"area" : "admin"}
+@admin_router.get("", response_class=HTMLResponse)
+async def admin_page(request: Request):
+    return templates.TemplateResponse("admin.html", {"request": request})
+
+@admin_router.get("/metrics")
+def admin_metrics():
+    with get_conn() as conn:
+        total_erros = conn.execute("SELECT COUNT(*) FROM erros").fetchone()[0]
+        total_buscas = conn.execute("SELECT COUNT(*) FROM queries_log").fetchone()[0]
+        total_fb = conn.execute("SELECT COUNT(*) FROM feedback").fetchone()[0]
+        resolvidos = conn.execute("SELECT COUNT(*) FROM feedback WHERE resolvido = 1").fetchone()[0]
+        top_termos = conn.execute("""
+            SELECT termo, COUNT(*) as c FROM queries_log
+            WHERE termo IS NOT NULL AND termo <> ''
+              AND created_at >= datetime('now','-30 day')
+            GROUP BY termo ORDER BY c DESC LIMIT 10
+        """).fetchall()
+        top_marcas = conn.execute("""
+            SELECT marca, COUNT(*) as c FROM queries_log
+            WHERE marca IS NOT NULL AND marca <> ''
+              AND created_at >= datetime('now','-30 day')
+            GROUP BY marca ORDER BY c DESC LIMIT 10
+        """).fetchall()
+    return {
+        "totais": {
+            "erros": total_erros,
+            "buscas": total_buscas,
+            "feedbacks": total_fb,
+            "taxa_resolucao": (resolvidos / total_fb) if total_fb else None
+        },
+        "top_termos_30d": [{"termo": r[0], "count": r[1]} for r in top_termos],
+        "top_marcas_30d": [{"marca": r[0], "count": r[1]} for r in top_marcas],
+    }
 
 app.include_router(admin_router)
 
@@ -573,9 +603,6 @@ def api_buscar(
     return JSONResponse(data)
 
 # ---------------- Admin / Import / Export / Métricas ----------------
-@app.get("/admin", response_class=HTMLResponse)
-async def admin_page(request: Request):
-    return templates.TemplateResponse("admin.html", {"request": request})
 
 @app.post("/admin/reseed")
 def admin_reseed():
@@ -586,36 +613,6 @@ def admin_reseed():
     with get_conn() as conn:
         n = conn.execute("SELECT COUNT(*) FROM erros").fetchone()[0]
     return {"ok": True, "rows": n}
-
-@app.get("/admin/metrics")
-def admin_metrics():
-    with get_conn() as conn:
-        total_erros = conn.execute("SELECT COUNT(*) FROM erros").fetchone()[0]
-        total_buscas = conn.execute("SELECT COUNT(*) FROM queries_log").fetchone()[0]
-        total_fb = conn.execute("SELECT COUNT(*) FROM feedback").fetchone()[0]
-        resolvidos = conn.execute("SELECT COUNT(*) FROM feedback WHERE resolvido = 1").fetchone()[0]
-        top_termos = conn.execute("""
-            SELECT termo, COUNT(*) as c FROM queries_log
-            WHERE termo IS NOT NULL AND termo <> ''
-              AND created_at >= datetime('now','-30 day')
-            GROUP BY termo ORDER BY c DESC LIMIT 10
-        """).fetchall()
-        top_marcas = conn.execute("""
-            SELECT marca, COUNT(*) as c FROM queries_log
-            WHERE marca IS NOT NULL AND marca <> ''
-              AND created_at >= datetime('now','-30 day')
-            GROUP BY marca ORDER BY c DESC LIMIT 10
-        """).fetchall()
-    return {
-        "totais": {
-            "erros": total_erros,
-            "buscas": total_buscas,
-            "feedbacks": total_fb,
-            "taxa_resolucao": (resolvidos / total_fb) if total_fb else None
-        },
-        "top_termos_30d": [{"termo": r[0], "count": r[1]} for r in top_termos],
-        "top_marcas_30d": [{"marca": r[0], "count": r[1]} for r in top_marcas],
-    }
 
 # Export CSV/XLSX
 @app.get("/export/csv")
