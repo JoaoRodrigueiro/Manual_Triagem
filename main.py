@@ -31,6 +31,7 @@ def verificar_admin(x_token: str = Header(None)):
         raise HTTPException(status_code=500, detail="ADMIN_TOKEN não configurado")
     if x_token != ADMIN_TOKEN:
         raise HTTPException(status_code=403, detail="Acesso Negado")
+    print("Função verificar_admin foi chamada")
     
 admin_router = APIRouter(
     prefix="/admin",
