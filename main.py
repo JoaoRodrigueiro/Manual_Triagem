@@ -844,3 +844,11 @@ def buscar_html(
             "query_error": None
         }
     )
+
+@app.get("/")
+def home():
+    return {
+        "projeto": "Manual Triagem",
+        "status": "online",
+        "ambiente": "produção"
+    }
