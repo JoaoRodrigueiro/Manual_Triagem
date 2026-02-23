@@ -3,6 +3,7 @@ from fastapi import FastAPI, Request, Query, UploadFile, File, Form
 from fastapi.responses import HTMLResponse, JSONResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from fastapi import Header, HTTPException, Depends
 
 import os, json, io, csv, sqlite3
 from typing import List, Dict, Any, Optional
@@ -18,6 +19,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(BASE_DIR, "data", "erros_base.json")
 DB_PATH   = os.path.join(BASE_DIR, "database.db")
 MODEL_PATH = os.path.join(BASE_DIR, "model_cls.joblib")
+ADMIN_TOKEN = os.getenv("ADMIN_TOKEN")
 
 app = FastAPI(title="Manual Inteligente – Triagem")
 app.mount("/static", StaticFiles(directory=os.path.join(BASE_DIR, "static")), name="static")
@@ -852,3 +854,15 @@ def home():
         "status": "online",
         "ambiente": "produção"
     }
+
+def verificar_admin(x_token: str = Header(None)):
+    if x_token != ADMIN_TOKEN:
+        raise HTTPException(status_code=403, detail="Acesso Negado")
+    
+@app.get("/admin")
+def admin(_:str = Depends(verificar_admin)):
+    return {"area": "admin"}
+
+@app.post("/treinar-modelo")
+def treinar_modelo(_:str = Depends(verificar_admin)):
+    return {"status" : "Treinamento Iniciado"}
