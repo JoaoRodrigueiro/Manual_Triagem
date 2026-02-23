@@ -1,10 +1,11 @@
 # ==================== main.py ====================
 from fastapi import FastAPI, Request, Query, UploadFile, File, Form
-from fastapi.responses import HTMLResponse, JSONResponse, StreamingResponse
+from fastapi.responses import HTMLResponse, JSONResponse, StreamingResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi import Header, HTTPException, Depends
 from fastapi import APIRouter, Depends
+from starlette.responses import Response
 
 import os, json, io, csv, sqlite3
 from typing import List, Dict, Any, Optional
@@ -21,17 +22,33 @@ DATA_PATH = os.path.join(BASE_DIR, "data", "erros_base.json")
 DB_PATH   = os.path.join(BASE_DIR, "database.db")
 MODEL_PATH = os.path.join(BASE_DIR, "model_cls.joblib")
 ADMIN_TOKEN = os.getenv("ADMIN_TOKEN")
+ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD")
 
 app = FastAPI(title="Manual Inteligente – Triagem")
 app.mount("/static", StaticFiles(directory=os.path.join(BASE_DIR, "static")), name="static")
 templates = Jinja2Templates(directory=os.path.join(BASE_DIR, "templates"))
 
-def verificar_admin(x_token: str = Header(None)):
-    if not ADMIN_TOKEN:
-        raise HTTPException(status_code=500, detail="ADMIN_TOKEN não configurado")
-    if x_token != ADMIN_TOKEN:
-        raise HTTPException(status_code=403, detail="Acesso Negado")
-    print("Função verificar_admin foi chamada")
+@app.get("/login", response_class=HTMLResponse)
+async def login_page(request : Request):
+    return templates.TemplateResponse("login.html", {"request": request})
+
+@app.post("/login")
+async def login(response : Response, password: str = Form(...)):
+    if password == ADMIN_PASSWORD:
+        response = RedirectResponse(url="/admin", status_code=302)
+        response.set_cookie(
+            key="admin_session",
+            value="valid",
+            httponly=True,
+            secure=True,
+            samesite="lax"
+        )
+        return response
+    return {"erro" : "Senha Incorreta"}
+
+def verificar_admin(request : Request):
+    if request.cookies.get("admin_session") != "valid":
+        raise HTTPException(status_code=403)
     
 admin_router = APIRouter(
     prefix="/admin",
