@@ -26,6 +26,23 @@ app = FastAPI(title="Manual Inteligente – Triagem")
 app.mount("/static", StaticFiles(directory=os.path.join(BASE_DIR, "static")), name="static")
 templates = Jinja2Templates(directory=os.path.join(BASE_DIR, "templates"))
 
+def verificar_admin(x_token: str = Header(None)):
+    if not ADMIN_TOKEN:
+        raise HTTPException(status_code=500, detail="ADMIN_TOKEN não configurado")
+    if x_token != ADMIN_TOKEN:
+        raise HTTPException(status_code=403, detail="Acesso Negado")
+    
+admin_router = APIRouter(
+    prefix="/admin",
+    dependencies=[Depends(verificar_admin)]
+)
+
+@admin_router.get("")
+def admin_home():
+    return {"area" : "admin"}
+
+app.include_router(admin_router)
+
 # ---------------- DB helpers ----------------
 def get_conn() -> sqlite3.Connection:
     conn = sqlite3.connect(DB_PATH)
@@ -855,30 +872,3 @@ def home():
         "status": "online",
         "ambiente": "produção"
     }
-
-def verificar_admin(x_token: str = Header(None)):
-    if x_token != ADMIN_TOKEN:
-        raise HTTPException(status_code=403, detail="Acesso Negado")
-    
-@app.get("/admin")
-def admin(_:str = Depends(verificar_admin)):
-    return {"area": "admin"}
-
-@app.post("/treinar-modelo")
-def treinar_modelo(_:str = Depends(verificar_admin)):
-    return {"status" : "Treinamento Iniciado"}
-
-admin_router = APIRouter(
-    prefix="/admin",
-    dependencies=[Depends(verificar_admin)]
-)
-
-@admin_router.get("")
-def admin_home():
-    return {"area": "admin"}
-
-@admin_router.post("/train")
-def train():
-    return {"status" : "Treinando"}
-
-app.include_router(admin_router)
