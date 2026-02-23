@@ -4,6 +4,7 @@ from fastapi.responses import HTMLResponse, JSONResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi import Header, HTTPException, Depends
+from fastapi import APIRouter, Depends
 
 import os, json, io, csv, sqlite3
 from typing import List, Dict, Any, Optional
@@ -866,3 +867,18 @@ def admin(_:str = Depends(verificar_admin)):
 @app.post("/treinar-modelo")
 def treinar_modelo(_:str = Depends(verificar_admin)):
     return {"status" : "Treinamento Iniciado"}
+
+admin_router = APIRouter(
+    prefix="/admin",
+    dependencies=[Depends(verificar_admin)]
+)
+
+@admin_router.get("")
+def admin_home():
+    return {"area": "admin"}
+
+@admin_router.post("/train")
+def train():
+    return {"status" : "Treinando"}
+
+app.include_router(admin_router)
