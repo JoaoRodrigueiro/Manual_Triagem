@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+jinja2
+unidecode
+PyPDF2
+pandas
+python-multipart
+openpyxl
+scikit-learn
+joblib

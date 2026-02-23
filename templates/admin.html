@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin · Manual Inteligente</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar-inner">
+        <img
+            src="{{ url_for('static', path='logo_techub.png') }}"
+            alt="Techub"
+            class="logo-main"
+        >
+    </div>
+</header>
+
+    <main class="page">
+
+        <!-- LINHA DE BOTÕES VERDES (EMBAIXO E À DIREITA) -->
+        <section class="actions">
+            <a class="btn btn-pill" href="/">INÍCIO</a>
+            <a class="btn btn-pill" href="/admin">ADMIN</a>
+            <a class="btn btn-pill" href="#train">TREINAR MODELO</a>
+        </section>
+
+        <section class="hero">
+            <h1 class="hero-title">Área administrativa</h1>
+            <p class="hero-subtitle">
+                Importação de base, exportação, métricas e treinamento do modelo de sugestão.
+            </p>
+        </section>
+
+        <!-- IMPORTAÇÃO -->
+        <section class="block">
+            <h3>Importar base (CSV/XLSX)</h3>
+            <form id="form-import" action="/admin/import" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" accept=".csv,.xlsx" />
+                <button class="btn" type="submit">Importar</button>
+            </form>
+            <p class="small">
+                A planilha deve conter pelo menos uma coluna com o título do erro; outras colunas são detectadas automaticamente.
+            </p>
+            <div id="import-result" class="small"></div>
+        </section>
+
+        <!-- EXPORTAÇÃO -->
+        <section class="block">
+            <h3>Exportar resultados</h3>
+            <p class="small">
+                Informe um termo de busca para exportar os resultados atuais em CSV ou XLSX.
+            </p>
+            <form class="export-form" onsubmit="return false;">
+                <input type="text" id="export-termo" placeholder="Termo para exportar (obrigatório)" />
+                <div class="export-actions">
+                    <button class="btn btn-ghost" type="button" onclick="exportar('csv')">Exportar CSV</button>
+                    <button class="btn btn-ghost" type="button" onclick="exportar('xlsx')">Exportar XLSX</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- RESEED / RESET BASE -->
+        <section class="block">
+            <h3>Redefinir base (reseed)</h3>
+            <p class="small">
+                Remove todos os registros atuais e recarrega a base padrão do arquivo <code>erros_base.json</code>.
+            </p>
+            <button class="btn btn-ghost" type="button" onclick="reseed()">Apagar tudo e recarregar base</button>
+            <div id="reseed-result" class="small"></div>
+        </section>
+
+        <!-- TREINAMENTO -->
+        <section class="block" id="train">
+            <h3>Treinar modelo de sugestão</h3>
+            <p class="small">
+                Utiliza os registros cadastrados no banco para treinar um modelo que sugere erros a partir de uma descrição.
+            </p>
+            <button class="btn" type="button" onclick="treinar()">Treinar modelo</button>
+            <div id="train-result" class="small"></div>
+        </section>
+
+        <!-- MÉTRICAS -->
+        <section class="block">
+            <h3>Métricas gerais</h3>
+            <button class="btn btn-ghost" type="button" onclick="carregarMetricas()">Atualizar métricas</button>
+            <pre id="metrics" class="metrics"></pre>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        © Suporte N1 · Manual Inteligente · Admin
+    </footer>
+
+    <script>
+        async function reseed() {
+            const res = await fetch("/admin/reseed", { method: "POST" });
+            const data = await res.json();
+            document.getElementById("reseed-result").textContent =
+                data.ok ? `Base recarregada. Registros: ${data.rows}` : "Falha ao recarregar base.";
+        }
+
+        async function treinar() {
+            const res = await fetch("/admin/train", { method: "POST" });
+            const data = await res.json();
+            document.getElementById("train-result").textContent =
+                data.ok ? `Modelo treinado com ${data.trained} registros.` : (data.detail || "Erro ao treinar.");
+        }
+
+        async function carregarMetricas() {
+            const res = await fetch("/admin/metrics");
+            const data = await res.json();
+            document.getElementById("metrics").textContent = JSON.stringify(data, null, 2);
+        }
+
+        document.getElementById("form-import").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            const res = await fetch(form.action, { method: "POST", body: formData });
+            const data = await res.json();
+            document.getElementById("import-result").textContent =
+                data.ok ? `Registros importados: ${data.inserted}` : "Erro ao importar.";
+        });
+
+        function exportar(tipo) {
+            const termo = document.getElementById("export-termo").value.trim();
+            if (!termo) {
+                alert("Informe um termo para exportar.");
+                return;
+            }
+            const url = `/export/${tipo}?termo=` + encodeURIComponent(termo);
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+</html>

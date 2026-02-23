@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Manual Inteligente</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+<body>
+
+    <!-- HEADER SUPERIOR (mantém só o título) -->
+    <header class="topbar">
+    <div class="topbar-inner">
+        <img
+            src="{{ url_for('static', path='logo_techub.png') }}"
+            alt="Techub"
+            class="logo-main"
+        >
+    </div>
+</header>
+
+    <main class="page">
+
+        <!-- LINHA DE BOTÕES VERDES (EMBAIXO E À DIREITA) -->
+        <section class="actions">
+            <a class="btn btn-pill" href="/">INÍCIO</a>
+            <a class="btn btn-pill" href="/admin">ADMIN</a>
+            <a class="btn btn-pill" href="/admin#train">TREINAR MODELO</a>
+        </section>
+
+        <!-- HERO / TÍTULO + DESCRIÇÃO -->
+        <section class="hero">
+            <h1 class="hero-title">Busca de erros</h1>
+            <p class="hero-subtitle">
+                Busque por código, sintoma, marca ou modelo. Perguntas separadas para Cliente e Técnico (N1).
+            </p>
+        </section>
+
+        <!-- FORMULÁRIO DE BUSCA -->
+        <section class="search-section">
+            <form class="search-form" method="get" action="/buscar">
+                <div class="field-row">
+                    <select name="marca" id="marcaSelect">
+                        <option value="">Selecione o Fabricante</option>
+                    </select>
+
+                    <select name="modelo" id="modeloSelect">
+                        <option value="">Todos os modelos</option>
+                    </select>
+                    <input
+                        type="text"
+                        name="termo"
+                        value="{{ query }}"
+                        placeholder="Ex.: SC542, atolamento, SMTP, SP4510SF, MX622..."
+                    />
+                    <button type="submit" class="btn btn-pill">Buscar</button>
+                </div>
+            </form>
+
+            {% if not query %}
+            <section class="hero-search">
+
+                <h2>Comece digitando um erro ou sintoma</h2>
+                <p class="hero-subtitle">
+                    Exemplos: <code>SC542</code>, <code>900.xx</code>, <code>reset kit</code>,
+                    <code>linhas na digitalização</code>, <code>falha SMTP</code>.
+                </p>
+
+                <!-- INPUT GRANDE DE BUSCA -->
+                <form method="get" action="/buscar" class="hero-search-form">
+                <input
+                    type="text"
+                    name="termo"
+                    placeholder="Digite o erro, código ou sintoma..."
+                    class="hero-search-input"
+                    autofocus
+                />
+                </form>
+            </section>
+            {% endif %}
+
+ <!-- RESULTADOS DETALHADOS -->
+{% block content %}
+<!-- conteúdo que será inserido pela página buscar.html -->
+{% endblock %}
+
+        <!-- BLOCO DE SUGESTÃO DE NOVO ERRO -->
+        <section class="suggest-section">
+            <h2 class="hero-title">Sugerir novo erro ou melhoria</h2>
+            <p class="hero-subtitle">
+                Cole aqui a descrição do erro ou melhoria que você gostaria de registrar.
+                Clique em <strong>Copiar sugestão</strong> e envie pelo canal definido pela coordenação.
+            </p>
+            <textarea id="sugestao-texto" placeholder="Ex.: Impressora Lexmark MS821 mostrando erro 900.43 ao imprimir PDF grande..."></textarea>
+            <div class="suggest-actions">
+                <button class="btn btn-ghost" type="button" onclick="copiarSugestao()">Copiar sugestão</button>
+                <span class="feedback-inline" id="sugestao-msg"></span>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        © Suporte N1 · Manual Inteligente
+    </footer>
+
+    <script>
+        function montarTextoResposta(btn) {
+            const titulo = btn.dataset.titulo || "";
+            const codigo = btn.dataset.codigo || "";
+            const descricao = btn.dataset.descricao || "";
+            const solucoes = btn.dataset.solucoes || "";
+
+            const partes = [];
+            if (codigo) partes.push("Código: " + codigo);
+            if (titulo) partes.push("Erro: " + titulo);
+            if (descricao) partes.push("Descrição: " + descricao);
+            if (solucoes) partes.push("Passos sugeridos: " + solucoes);
+
+            return partes.join("\\n\\n");
+        }
+
+        async function copiarResposta(el) {
+            const texto = montarTextoResposta(el);
+            try {
+                await navigator.clipboard.writeText(texto);
+                el.textContent = "Copiado!";
+                setTimeout(() => (el.textContent = "Copiar resposta"), 1500);
+            } catch (e) {
+                alert("Não foi possível copiar automaticamente. Copie manualmente.");
+            }
+        }
+
+        async function enviarFeedback(id) {
+            const sel = document.getElementById("fb-r-" + id);
+            const inp = document.getElementById("fb-c-" + id);
+            const msg = document.getElementById("fb-msg-" + id);
+
+            const resolvido = sel.value;
+            const comentario = inp.value || "";
+
+            const formData = new FormData();
+            formData.append("erro_id", id);
+            formData.append("resolvido", resolvido);
+            formData.append("comentario", comentario);
+
+            try {
+                const res = await fetch("/feedback", {
+                    method: "POST",
+                    body: formData,
+                });
+                const data = await res.json();
+                if (data && data.ok) {
+                    msg.textContent = "Obrigado pelo feedback!";
+                    msg.classList.add("feedback-ok");
+                    inp.value = "";
+                } else {
+                    msg.textContent = "Erro ao registrar feedback.";
+                    msg.classList.add("feedback-err");
+                }
+            } catch (e) {
+                msg.textContent = "Falha na conexão ao enviar feedback.";
+                msg.classList.add("feedback-err");
+            }
+
+            setTimeout(() => {
+                msg.textContent = "";
+                msg.classList.remove("feedback-ok", "feedback-err");
+            }, 3000);
+
+            return false;
+        }
+
+        async function copiarSugestao() {
+            const txt = document.getElementById("sugestao-texto");
+            const msg = document.getElementById("sugestao-msg");
+            const valor = txt.value.trim();
+            if (!valor) {
+                msg.textContent = "Digite uma sugestão antes de copiar.";
+                msg.classList.add("feedback-err");
+                setTimeout(() => {
+                    msg.textContent = "";
+                    msg.classList.remove("feedback-err");
+                }, 2500);
+                return;
+            }
+
+            try {
+                await navigator.clipboard.writeText(valor);
+                msg.textContent = "Sugestão copiada!";
+                msg.classList.add("feedback-ok");
+            } catch (e) {
+                msg.textContent = "Não foi possível copiar automaticamente.";
+                msg.classList.add("feedback-err");
+            }
+
+            setTimeout(() => {
+                msg.textContent = "";
+                msg.classList.remove("feedback-ok", "feedback-err");
+            }, 2500);
+        }
+    </script>
+    <script>
+document.querySelectorAll(".accordion-toggle").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+});
+</script>
+<script>
+const marcaSelect = document.getElementById("marcaSelect");
+const modeloSelect = document.getElementById("modeloSelect");
+
+// ---------------- CARREGAR MARCAS ----------------
+async function carregarMarcas() {
+    try {
+        const res = await fetch("/api/marcas");
+        const marcas = await res.json();
+
+        marcas.forEach(m => {
+            const opt = document.createElement("option");
+            opt.value = m;
+            opt.textContent = m;
+            marcaSelect.appendChild(opt);
+        });
+    } catch (err) {
+        console.error("Erro ao carregar marcas:", err);
+    }
+}
+
+// ---------------- AO TROCAR MARCA ----------------
+marcaSelect.addEventListener("change", async () => {
+    const marca = marcaSelect.value;
+
+    // reset modelo
+    modeloSelect.innerHTML = `<option value="">Todos os modelos</option>`;
+    modeloSelect.disabled = false;
+
+    if (!marca) return;
+
+    try {
+        const res = await fetch(`/api/modelos?marca=${encodeURIComponent(marca)}`);
+        const modelos = await res.json();
+
+        // se não houver modelos, mantém apenas "Todos"
+        modelos.forEach(m => {
+            const opt = document.createElement("option");
+            opt.value = m;
+            opt.textContent = m;
+            modeloSelect.appendChild(opt);
+        });
+    } catch (err) {
+        console.error("Erro ao carregar modelos:", err);
+    }
+});
+
+// ---------------- INIT ----------------
+carregarMarcas();
+</script>
+</body>
+</html>

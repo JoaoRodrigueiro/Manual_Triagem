@@ -1,0 +1,126 @@
+{% extends "index.html" %}
+
+{% block content %}
+<section class="results-section">
+    {% if resultados and resultados|length %}
+    {% for r in resultados %}
+
+    <article class="detail accordion-item">
+        <div class="semantic-hint subtle">
+            <span class="hint-action">Ação sugerida: {{ r.acao|upper }}</span>
+            <span class="hint-destino destino-{{ r.destino }}">
+                Destino: {{ r.destino|upper }}
+            </span>
+        </div>
+        </div>
+        <summary class="accordion-toggle">
+            {{ r.codigo }} – {{ r.titulo }}
+        </summary>
+
+        <div class="accordion-content">
+            <p><strong>Marca:</strong> {{ r.marca }}</p>
+            <p><strong>Modelo:</strong> {{ r.modelo or "Genérico" }}</p>
+
+            {% if r.descricao %}
+            <p><strong>Descrição:</strong> {{ r.descricao }}</p>
+            {% endif %}
+
+            {% if r.acao != "at_direto" %}
+            {% if r.perguntas_cliente and r.perguntas_cliente|length %}
+            <div class="block">
+                <h3>Triagem com o cliente</h3>
+
+                <ul>
+                    {% for p in r.perguntas_cliente %}
+                    <li>{{ p }}</li>
+                    {% endfor %}
+                </ul>
+
+                <p class="small">
+                    Faça essas perguntas diretamente ao cliente antes de executar qualquer procedimento técnico.
+                </p>
+            </div>
+            {% endif %}
+
+            <div class="block checklist-block">
+                <h3>Verificações básicas</h3>
+
+                <ul class="checklist">
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            Equipamento foi desligado, aguardado 30 segundos e religado?
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            Cabos de energia e comunicação foram conferidos?
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            Reset básico já foi executado (quando aplicável)?
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            O erro voltou após os testes iniciais?
+                        </label>
+                    </li>
+                </ul>
+
+                <p class="small">
+                    Este checklist ajuda a garantir que os testes iniciais foram realizados antes do acionamento.
+                </p>
+            </div>
+
+            <h3>Procedimento técnico (N1)</h3>
+
+            {% if r.solucoes %}
+            <ul>
+                {% for s in r.solucoes %}
+                <li>{{ s }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+            {% else %}
+
+            <div class="block">
+                <h3>Encaminhamento</h3>
+
+                <p>
+                    Este erro não possui ação remota aplicável.
+                    O atendimento deve ser encaminhado diretamente para a Assistência Técnica.
+                </p>
+
+                {% if r.perguntas_cliente and r.perguntas_cliente|length %}
+                <p class="small">
+                    Utilize as perguntas abaixo apenas para coletar informações antes do encaminhamento:
+                </p>
+
+                <ul>
+                    {% for p in r.perguntas_cliente %}
+                    <li>{{ p }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+
+            {% endif %}
+        </div>
+        </details>
+    </article>
+
+    {% endfor %}
+    {% else %}
+    <div class="empty">
+        Nenhum resultado encontrado.
+    </div>
+    {% endif %}
+
+</section>
+{% endblock %}

@@ -1,0 +1,1969 @@
+[
+  {
+    "codigo": "SC542",
+    "titulo": "Falha de aquecimento do fusor (Ricoh) – procedimento de reset",
+    "termos": [
+      "ricoh",
+      "sc",
+      "fusor",
+      "aquecimento",
+      "reset",
+      "erro"
+    ],
+    "descricao": "A impressora detectou falha no aquecimento do fusor. Necessário validar energia, estado do módulo e efetuar reset pelo modo de serviço.",
+    "causas": [
+      "Queda de energia durante aquecimento do fusor.",
+      "Termistor com leitura incorreta.",
+      "Cabo do fusor mal encaixado ou danificado.",
+      "Módulo do fusor com defeito."
+    ],
+    "solucoes": [
+      "Desligar o equipamento e aguardar 30 segundos antes de religar.",
+      "Verificar cabos e conectores do fusor.",
+      "Acessar o modo de serviço e executar a rotina de reset do fusor.",
+      "Atualizar o firmware para a versão recomendada pelo fabricante.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O erro aparece logo ao ligar ou após alguns minutos?",
+      "O equipamento foi movido/transportado recentemente?",
+      "Houve queda de energia no local?",
+      "Já foi feito algum reset anterior?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "SC543",
+    "titulo": "Falha térmica do fusor (Ricoh) – procedimento de reset",
+    "termos": [
+      "ricoh",
+      "sc",
+      "fusor",
+      "aquecimento",
+      "reset",
+      "erro"
+    ],
+    "descricao": "A impressora detectou falha no aquecimento do fusor. Necessário validar energia, estado do módulo e efetuar reset pelo modo de serviço.",
+    "causas": [
+      "Queda de energia durante aquecimento do fusor.",
+      "Termistor com leitura incorreta.",
+      "Cabo do fusor mal encaixado ou danificado.",
+      "Módulo do fusor com defeito."
+    ],
+    "solucoes": [
+      "Desligar o equipamento e aguardar 30 segundos antes de religar.",
+      "Verificar cabos e conectores do fusor.",
+      "Acessar o modo de serviço e executar a rotina de reset do fusor.",
+      "Atualizar o firmware para a versão recomendada pelo fabricante.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O erro aparece logo ao ligar ou após alguns minutos?",
+      "O equipamento foi movido/transportado recentemente?",
+      "Houve queda de energia no local?",
+      "Já foi feito algum reset anterior?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "SC544",
+    "titulo": "Superaquecimento do fusor (Ricoh) – procedimento de reset",
+    "termos": [
+      "ricoh",
+      "sc",
+      "fusor",
+      "aquecimento",
+      "reset",
+      "erro"
+    ],
+    "descricao": "A impressora detectou falha no aquecimento do fusor. Necessário validar energia, estado do módulo e efetuar reset pelo modo de serviço.",
+    "causas": [
+      "Queda de energia durante aquecimento do fusor.",
+      "Termistor com leitura incorreta.",
+      "Cabo do fusor mal encaixado ou danificado.",
+      "Módulo do fusor com defeito."
+    ],
+    "solucoes": [
+      "Desligar o equipamento e aguardar 30 segundos antes de religar.",
+      "Verificar cabos e conectores do fusor.",
+      "Acessar o modo de serviço e executar a rotina de reset do fusor.",
+      "Atualizar o firmware para a versão recomendada pelo fabricante.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O erro aparece logo ao ligar ou após alguns minutos?",
+      "O equipamento foi movido/transportado recentemente?",
+      "Houve queda de energia no local?",
+      "Já foi feito algum reset anterior?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "SC553",
+    "titulo": "Detecção anômala de temperatura no fusor (Ricoh) – procedimento de reset",
+    "termos": [
+      "ricoh",
+      "sc",
+      "fusor",
+      "aquecimento",
+      "reset",
+      "erro"
+    ],
+    "descricao": "A impressora detectou falha no aquecimento do fusor. Necessário validar energia, estado do módulo e efetuar reset pelo modo de serviço.",
+    "causas": [
+      "Queda de energia durante aquecimento do fusor.",
+      "Termistor com leitura incorreta.",
+      "Cabo do fusor mal encaixado ou danificado.",
+      "Módulo do fusor com defeito."
+    ],
+    "solucoes": [
+      "Desligar o equipamento e aguardar 30 segundos antes de religar.",
+      "Verificar cabos e conectores do fusor.",
+      "Acessar o modo de serviço e executar a rotina de reset do fusor.",
+      "Atualizar o firmware para a versão recomendada pelo fabricante.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O erro aparece logo ao ligar ou após alguns minutos?",
+      "O equipamento foi movido/transportado recentemente?",
+      "Houve queda de energia no local?",
+      "Já foi feito algum reset anterior?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "900.00",
+    "titulo": "Erro 900.xx (Lexmark) – travamento de firmware/comunicação",
+    "termos": [
+      "lexmark",
+      "900.xx",
+      "firmware",
+      "travamento",
+      "comunicacao",
+      "driver"
+    ],
+    "descricao": "Ocorre travamento do firmware, geralmente relacionado a trabalhos corrompidos, drivers incompatíveis ou falhas em extensões/soluções embarcadas.",
+    "causas": [
+      "Trabalho corrompido enviado à fila de impressão.",
+      "Firmware desatualizado ou incompatível com solução embarcada.",
+      "Driver incorreto ou fila do servidor com jobs travados."
+    ],
+    "solucoes": [
+      "Cancelar todos os trabalhos da fila de impressão.",
+      "Reiniciar impressora e servidor de impressão.",
+      "Atualizar firmware para a última versão homologada.",
+      "Trocar o driver (testar PCL/PS) e revalidar.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O erro acontece ao imprimir de um aplicativo específico?",
+      "Há jobs presos na fila do servidor?",
+      "Qual é a versão atual do firmware?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "900.01",
+    "titulo": "Erro 900.xx (Lexmark) – travamento de firmware/comunicação",
+    "termos": [
+      "lexmark",
+      "900.xx",
+      "firmware",
+      "travamento",
+      "comunicacao",
+      "driver"
+    ],
+    "descricao": "Ocorre travamento do firmware, geralmente relacionado a trabalhos corrompidos, drivers incompatíveis ou falhas em extensões/soluções embarcadas.",
+    "causas": [
+      "Trabalho corrompido enviado à fila de impressão.",
+      "Firmware desatualizado ou incompatível com solução embarcada.",
+      "Driver incorreto ou fila do servidor com jobs travados."
+    ],
+    "solucoes": [
+      "Cancelar todos os trabalhos da fila de impressão.",
+      "Reiniciar impressora e servidor de impressão.",
+      "Atualizar firmware para a última versão homologada.",
+      "Trocar o driver (testar PCL/PS) e revalidar.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O erro acontece ao imprimir de um aplicativo específico?",
+      "Há jobs presos na fila do servidor?",
+      "Qual é a versão atual do firmware?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "900.02",
+    "titulo": "Erro 900.xx (Lexmark) – travamento de firmware/comunicação",
+    "termos": [
+      "lexmark",
+      "900.xx",
+      "firmware",
+      "travamento",
+      "comunicacao",
+      "driver"
+    ],
+    "descricao": "Ocorre travamento do firmware, geralmente relacionado a trabalhos corrompidos, drivers incompatíveis ou falhas em extensões/soluções embarcadas.",
+    "causas": [
+      "Trabalho corrompido enviado à fila de impressão.",
+      "Firmware desatualizado ou incompatível com solução embarcada.",
+      "Driver incorreto ou fila do servidor com jobs travados."
+    ],
+    "solucoes": [
+      "Cancelar todos os trabalhos da fila de impressão.",
+      "Reiniciar impressora e servidor de impressão.",
+      "Atualizar firmware para a última versão homologada.",
+      "Trocar o driver (testar PCL/PS) e revalidar.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O erro acontece ao imprimir de um aplicativo específico?",
+      "Há jobs presos na fila do servidor?",
+      "Qual é a versão atual do firmware?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "900.03",
+    "titulo": "Erro 900.xx (Lexmark) – travamento de firmware/comunicação",
+    "termos": [
+      "lexmark",
+      "900.xx",
+      "firmware",
+      "travamento",
+      "comunicacao",
+      "driver"
+    ],
+    "descricao": "Ocorre travamento do firmware, geralmente relacionado a trabalhos corrompidos, drivers incompatíveis ou falhas em extensões/soluções embarcadas.",
+    "causas": [
+      "Trabalho corrompido enviado à fila de impressão.",
+      "Firmware desatualizado ou incompatível com solução embarcada.",
+      "Driver incorreto ou fila do servidor com jobs travados."
+    ],
+    "solucoes": [
+      "Cancelar todos os trabalhos da fila de impressão.",
+      "Reiniciar impressora e servidor de impressão.",
+      "Atualizar firmware para a última versão homologada.",
+      "Trocar o driver (testar PCL/PS) e revalidar.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O erro acontece ao imprimir de um aplicativo específico?",
+      "Há jobs presos na fila do servidor?",
+      "Qual é a versão atual do firmware?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "900.04",
+    "titulo": "Erro 900.xx (Lexmark) – travamento de firmware/comunicação",
+    "termos": [
+      "lexmark",
+      "900.xx",
+      "firmware",
+      "travamento",
+      "comunicacao",
+      "driver"
+    ],
+    "descricao": "Ocorre travamento do firmware, geralmente relacionado a trabalhos corrompidos, drivers incompatíveis ou falhas em extensões/soluções embarcadas.",
+    "causas": [
+      "Trabalho corrompido enviado à fila de impressão.",
+      "Firmware desatualizado ou incompatível com solução embarcada.",
+      "Driver incorreto ou fila do servidor com jobs travados."
+    ],
+    "solucoes": [
+      "Cancelar todos os trabalhos da fila de impressão.",
+      "Reiniciar impressora e servidor de impressão.",
+      "Atualizar firmware para a última versão homologada.",
+      "Trocar o driver (testar PCL/PS) e revalidar.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O erro acontece ao imprimir de um aplicativo específico?",
+      "Há jobs presos na fila do servidor?",
+      "Qual é a versão atual do firmware?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "900.05",
+    "titulo": "Erro 900.xx (Lexmark) – travamento de firmware/comunicação",
+    "termos": [
+      "lexmark",
+      "900.xx",
+      "firmware",
+      "travamento",
+      "comunicacao",
+      "driver"
+    ],
+    "descricao": "Ocorre travamento do firmware, geralmente relacionado a trabalhos corrompidos, drivers incompatíveis ou falhas em extensões/soluções embarcadas.",
+    "causas": [
+      "Trabalho corrompido enviado à fila de impressão.",
+      "Firmware desatualizado ou incompatível com solução embarcada.",
+      "Driver incorreto ou fila do servidor com jobs travados."
+    ],
+    "solucoes": [
+      "Cancelar todos os trabalhos da fila de impressão.",
+      "Reiniciar impressora e servidor de impressão.",
+      "Atualizar firmware para a última versão homologada.",
+      "Trocar o driver (testar PCL/PS) e revalidar.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O erro acontece ao imprimir de um aplicativo específico?",
+      "Há jobs presos na fila do servidor?",
+      "Qual é a versão atual do firmware?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "900.06",
+    "titulo": "Erro 900.xx (Lexmark) – travamento de firmware/comunicação",
+    "termos": [
+      "lexmark",
+      "900.xx",
+      "firmware",
+      "travamento",
+      "comunicacao",
+      "driver"
+    ],
+    "descricao": "Ocorre travamento do firmware, geralmente relacionado a trabalhos corrompidos, drivers incompatíveis ou falhas em extensões/soluções embarcadas.",
+    "causas": [
+      "Trabalho corrompido enviado à fila de impressão.",
+      "Firmware desatualizado ou incompatível com solução embarcada.",
+      "Driver incorreto ou fila do servidor com jobs travados."
+    ],
+    "solucoes": [
+      "Cancelar todos os trabalhos da fila de impressão.",
+      "Reiniciar impressora e servidor de impressão.",
+      "Atualizar firmware para a última versão homologada.",
+      "Trocar o driver (testar PCL/PS) e revalidar.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O erro acontece ao imprimir de um aplicativo específico?",
+      "Há jobs presos na fila do servidor?",
+      "Qual é a versão atual do firmware?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "900.07",
+    "titulo": "Erro 900.xx (Lexmark) – travamento de firmware/comunicação",
+    "termos": [
+      "lexmark",
+      "900.xx",
+      "firmware",
+      "travamento",
+      "comunicacao",
+      "driver"
+    ],
+    "descricao": "Ocorre travamento do firmware, geralmente relacionado a trabalhos corrompidos, drivers incompatíveis ou falhas em extensões/soluções embarcadas.",
+    "causas": [
+      "Trabalho corrompido enviado à fila de impressão.",
+      "Firmware desatualizado ou incompatível com solução embarcada.",
+      "Driver incorreto ou fila do servidor com jobs travados."
+    ],
+    "solucoes": [
+      "Cancelar todos os trabalhos da fila de impressão.",
+      "Reiniciar impressora e servidor de impressão.",
+      "Atualizar firmware para a última versão homologada.",
+      "Trocar o driver (testar PCL/PS) e revalidar.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O erro acontece ao imprimir de um aplicativo específico?",
+      "Há jobs presos na fila do servidor?",
+      "Qual é a versão atual do firmware?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "900.08",
+    "titulo": "Erro 900.xx (Lexmark) – travamento de firmware/comunicação",
+    "termos": [
+      "lexmark",
+      "900.xx",
+      "firmware",
+      "travamento",
+      "comunicacao",
+      "driver"
+    ],
+    "descricao": "Ocorre travamento do firmware, geralmente relacionado a trabalhos corrompidos, drivers incompatíveis ou falhas em extensões/soluções embarcadas.",
+    "causas": [
+      "Trabalho corrompido enviado à fila de impressão.",
+      "Firmware desatualizado ou incompatível com solução embarcada.",
+      "Driver incorreto ou fila do servidor com jobs travados."
+    ],
+    "solucoes": [
+      "Cancelar todos os trabalhos da fila de impressão.",
+      "Reiniciar impressora e servidor de impressão.",
+      "Atualizar firmware para a última versão homologada.",
+      "Trocar o driver (testar PCL/PS) e revalidar.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O erro acontece ao imprimir de um aplicativo específico?",
+      "Há jobs presos na fila do servidor?",
+      "Qual é a versão atual do firmware?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "900.09",
+    "titulo": "Erro 900.xx (Lexmark) – travamento de firmware/comunicação",
+    "termos": [
+      "lexmark",
+      "900.xx",
+      "firmware",
+      "travamento",
+      "comunicacao",
+      "driver"
+    ],
+    "descricao": "Ocorre travamento do firmware, geralmente relacionado a trabalhos corrompidos, drivers incompatíveis ou falhas em extensões/soluções embarcadas.",
+    "causas": [
+      "Trabalho corrompido enviado à fila de impressão.",
+      "Firmware desatualizado ou incompatível com solução embarcada.",
+      "Driver incorreto ou fila do servidor com jobs travados."
+    ],
+    "solucoes": [
+      "Cancelar todos os trabalhos da fila de impressão.",
+      "Reiniciar impressora e servidor de impressão.",
+      "Atualizar firmware para a última versão homologada.",
+      "Trocar o driver (testar PCL/PS) e revalidar.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O erro acontece ao imprimir de um aplicativo específico?",
+      "Há jobs presos na fila do servidor?",
+      "Qual é a versão atual do firmware?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "49.00",
+    "titulo": "Erro 49.xx (HP) – falha de firmware/IO",
+    "termos": [
+      "hp",
+      "49.xx",
+      "firmware",
+      "io",
+      "driver",
+      "travamento"
+    ],
+    "descricao": "Falha recorrente de firmware/entrada e saída (IO) que pode ser causada por spool corrompido ou comunicação instável.",
+    "causas": [
+      "Trabalho corrompido.",
+      "Firmware desatualizado.",
+      "Rede instável ou cabo defeituoso."
+    ],
+    "solucoes": [
+      "Limpar fila de impressão no servidor e no PC do usuário.",
+      "Atualizar firmware e reiniciar a impressora.",
+      "Testar impressão com outro driver (PCL/PS).",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O problema ocorre com todos os usuários ou apenas um?",
+      "Há erros semelhantes no histórico do equipamento?",
+      "Foi realizado teste com cabo/rede diferente?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "49.01",
+    "titulo": "Erro 49.xx (HP) – falha de firmware/IO",
+    "termos": [
+      "hp",
+      "49.xx",
+      "firmware",
+      "io",
+      "driver",
+      "travamento"
+    ],
+    "descricao": "Falha recorrente de firmware/entrada e saída (IO) que pode ser causada por spool corrompido ou comunicação instável.",
+    "causas": [
+      "Trabalho corrompido.",
+      "Firmware desatualizado.",
+      "Rede instável ou cabo defeituoso."
+    ],
+    "solucoes": [
+      "Limpar fila de impressão no servidor e no PC do usuário.",
+      "Atualizar firmware e reiniciar a impressora.",
+      "Testar impressão com outro driver (PCL/PS).",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O problema ocorre com todos os usuários ou apenas um?",
+      "Há erros semelhantes no histórico do equipamento?",
+      "Foi realizado teste com cabo/rede diferente?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "49.02",
+    "titulo": "Erro 49.xx (HP) – falha de firmware/IO",
+    "termos": [
+      "hp",
+      "49.xx",
+      "firmware",
+      "io",
+      "driver",
+      "travamento"
+    ],
+    "descricao": "Falha recorrente de firmware/entrada e saída (IO) que pode ser causada por spool corrompido ou comunicação instável.",
+    "causas": [
+      "Trabalho corrompido.",
+      "Firmware desatualizado.",
+      "Rede instável ou cabo defeituoso."
+    ],
+    "solucoes": [
+      "Limpar fila de impressão no servidor e no PC do usuário.",
+      "Atualizar firmware e reiniciar a impressora.",
+      "Testar impressão com outro driver (PCL/PS).",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O problema ocorre com todos os usuários ou apenas um?",
+      "Há erros semelhantes no histórico do equipamento?",
+      "Foi realizado teste com cabo/rede diferente?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "49.03",
+    "titulo": "Erro 49.xx (HP) – falha de firmware/IO",
+    "termos": [
+      "hp",
+      "49.xx",
+      "firmware",
+      "io",
+      "driver",
+      "travamento"
+    ],
+    "descricao": "Falha recorrente de firmware/entrada e saída (IO) que pode ser causada por spool corrompido ou comunicação instável.",
+    "causas": [
+      "Trabalho corrompido.",
+      "Firmware desatualizado.",
+      "Rede instável ou cabo defeituoso."
+    ],
+    "solucoes": [
+      "Limpar fila de impressão no servidor e no PC do usuário.",
+      "Atualizar firmware e reiniciar a impressora.",
+      "Testar impressão com outro driver (PCL/PS).",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O problema ocorre com todos os usuários ou apenas um?",
+      "Há erros semelhantes no histórico do equipamento?",
+      "Foi realizado teste com cabo/rede diferente?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "49.04",
+    "titulo": "Erro 49.xx (HP) – falha de firmware/IO",
+    "termos": [
+      "hp",
+      "49.xx",
+      "firmware",
+      "io",
+      "driver",
+      "travamento"
+    ],
+    "descricao": "Falha recorrente de firmware/entrada e saída (IO) que pode ser causada por spool corrompido ou comunicação instável.",
+    "causas": [
+      "Trabalho corrompido.",
+      "Firmware desatualizado.",
+      "Rede instável ou cabo defeituoso."
+    ],
+    "solucoes": [
+      "Limpar fila de impressão no servidor e no PC do usuário.",
+      "Atualizar firmware e reiniciar a impressora.",
+      "Testar impressão com outro driver (PCL/PS).",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O problema ocorre com todos os usuários ou apenas um?",
+      "Há erros semelhantes no histórico do equipamento?",
+      "Foi realizado teste com cabo/rede diferente?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "49.05",
+    "titulo": "Erro 49.xx (HP) – falha de firmware/IO",
+    "termos": [
+      "hp",
+      "49.xx",
+      "firmware",
+      "io",
+      "driver",
+      "travamento"
+    ],
+    "descricao": "Falha recorrente de firmware/entrada e saída (IO) que pode ser causada por spool corrompido ou comunicação instável.",
+    "causas": [
+      "Trabalho corrompido.",
+      "Firmware desatualizado.",
+      "Rede instável ou cabo defeituoso."
+    ],
+    "solucoes": [
+      "Limpar fila de impressão no servidor e no PC do usuário.",
+      "Atualizar firmware e reiniciar a impressora.",
+      "Testar impressão com outro driver (PCL/PS).",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O problema ocorre com todos os usuários ou apenas um?",
+      "Há erros semelhantes no histórico do equipamento?",
+      "Foi realizado teste com cabo/rede diferente?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "49.06",
+    "titulo": "Erro 49.xx (HP) – falha de firmware/IO",
+    "termos": [
+      "hp",
+      "49.xx",
+      "firmware",
+      "io",
+      "driver",
+      "travamento"
+    ],
+    "descricao": "Falha recorrente de firmware/entrada e saída (IO) que pode ser causada por spool corrompido ou comunicação instável.",
+    "causas": [
+      "Trabalho corrompido.",
+      "Firmware desatualizado.",
+      "Rede instável ou cabo defeituoso."
+    ],
+    "solucoes": [
+      "Limpar fila de impressão no servidor e no PC do usuário.",
+      "Atualizar firmware e reiniciar a impressora.",
+      "Testar impressão com outro driver (PCL/PS).",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O problema ocorre com todos os usuários ou apenas um?",
+      "Há erros semelhantes no histórico do equipamento?",
+      "Foi realizado teste com cabo/rede diferente?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "49.07",
+    "titulo": "Erro 49.xx (HP) – falha de firmware/IO",
+    "termos": [
+      "hp",
+      "49.xx",
+      "firmware",
+      "io",
+      "driver",
+      "travamento"
+    ],
+    "descricao": "Falha recorrente de firmware/entrada e saída (IO) que pode ser causada por spool corrompido ou comunicação instável.",
+    "causas": [
+      "Trabalho corrompido.",
+      "Firmware desatualizado.",
+      "Rede instável ou cabo defeituoso."
+    ],
+    "solucoes": [
+      "Limpar fila de impressão no servidor e no PC do usuário.",
+      "Atualizar firmware e reiniciar a impressora.",
+      "Testar impressão com outro driver (PCL/PS).",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O problema ocorre com todos os usuários ou apenas um?",
+      "Há erros semelhantes no histórico do equipamento?",
+      "Foi realizado teste com cabo/rede diferente?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "49.08",
+    "titulo": "Erro 49.xx (HP) – falha de firmware/IO",
+    "termos": [
+      "hp",
+      "49.xx",
+      "firmware",
+      "io",
+      "driver",
+      "travamento"
+    ],
+    "descricao": "Falha recorrente de firmware/entrada e saída (IO) que pode ser causada por spool corrompido ou comunicação instável.",
+    "causas": [
+      "Trabalho corrompido.",
+      "Firmware desatualizado.",
+      "Rede instável ou cabo defeituoso."
+    ],
+    "solucoes": [
+      "Limpar fila de impressão no servidor e no PC do usuário.",
+      "Atualizar firmware e reiniciar a impressora.",
+      "Testar impressão com outro driver (PCL/PS).",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O problema ocorre com todos os usuários ou apenas um?",
+      "Há erros semelhantes no histórico do equipamento?",
+      "Foi realizado teste com cabo/rede diferente?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "49.09",
+    "titulo": "Erro 49.xx (HP) – falha de firmware/IO",
+    "termos": [
+      "hp",
+      "49.xx",
+      "firmware",
+      "io",
+      "driver",
+      "travamento"
+    ],
+    "descricao": "Falha recorrente de firmware/entrada e saída (IO) que pode ser causada por spool corrompido ou comunicação instável.",
+    "causas": [
+      "Trabalho corrompido.",
+      "Firmware desatualizado.",
+      "Rede instável ou cabo defeituoso."
+    ],
+    "solucoes": [
+      "Limpar fila de impressão no servidor e no PC do usuário.",
+      "Atualizar firmware e reiniciar a impressora.",
+      "Testar impressão com outro driver (PCL/PS).",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O problema ocorre com todos os usuários ou apenas um?",
+      "Há erros semelhantes no histórico do equipamento?",
+      "Foi realizado teste com cabo/rede diferente?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 4
+  },
+  {
+    "codigo": "SMTP-401",
+    "titulo": "Falha para enviar digitalização por e-mail (SMTP) – autenticação",
+    "termos": [
+      "smtp",
+      "scan to email",
+      "digitalizacao",
+      "email",
+      "autenticacao",
+      "porta",
+      "tls"
+    ],
+    "descricao": "A função de digitalizar para e-mail falha devido a autenticação, porta/TLS incorretos ou limites de envio do provedor.",
+    "causas": [
+      "Usuário/senha incorretos ou senha de app ausente (2FA).",
+      "Porta/TLS incompatível com o provedor.",
+      "Bloqueio temporário do provedor por envio excessivo."
+    ],
+    "solucoes": [
+      "Validar host, porta e TLS conforme provedor (ex.: 587 TLS).",
+      "Gerar senha de aplicativo quando 2FA estiver ativo.",
+      "Testar com outra conta/servidor SMTP para comparação.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "A função já funcionou anteriormente? Quando parou?",
+      "Qual provedor e porta/TLS estão configurados?",
+      "Existe 2FA ativo na conta utilizada?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 3
+  },
+  {
+    "codigo": "SMTP-402",
+    "titulo": "Falha para enviar digitalização por e-mail (SMTP) – TLS/porta",
+    "termos": [
+      "smtp",
+      "scan to email",
+      "digitalizacao",
+      "email",
+      "autenticacao",
+      "porta",
+      "tls"
+    ],
+    "descricao": "A função de digitalizar para e-mail falha devido a autenticação, porta/TLS incorretos ou limites de envio do provedor.",
+    "causas": [
+      "Usuário/senha incorretos ou senha de app ausente (2FA).",
+      "Porta/TLS incompatível com o provedor.",
+      "Bloqueio temporário do provedor por envio excessivo."
+    ],
+    "solucoes": [
+      "Validar host, porta e TLS conforme provedor (ex.: 587 TLS).",
+      "Gerar senha de aplicativo quando 2FA estiver ativo.",
+      "Testar com outra conta/servidor SMTP para comparação.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "A função já funcionou anteriormente? Quando parou?",
+      "Qual provedor e porta/TLS estão configurados?",
+      "Existe 2FA ativo na conta utilizada?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 3
+  },
+  {
+    "codigo": "SMTP-403",
+    "titulo": "Falha para enviar digitalização por e-mail (SMTP) – limite do provedor",
+    "termos": [
+      "smtp",
+      "scan to email",
+      "digitalizacao",
+      "email",
+      "autenticacao",
+      "porta",
+      "tls"
+    ],
+    "descricao": "A função de digitalizar para e-mail falha devido a autenticação, porta/TLS incorretos ou limites de envio do provedor.",
+    "causas": [
+      "Usuário/senha incorretos ou senha de app ausente (2FA).",
+      "Porta/TLS incompatível com o provedor.",
+      "Bloqueio temporário do provedor por envio excessivo."
+    ],
+    "solucoes": [
+      "Validar host, porta e TLS conforme provedor (ex.: 587 TLS).",
+      "Gerar senha de aplicativo quando 2FA estiver ativo.",
+      "Testar com outra conta/servidor SMTP para comparação.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "A função já funcionou anteriormente? Quando parou?",
+      "Qual provedor e porta/TLS estão configurados?",
+      "Existe 2FA ativo na conta utilizada?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 2
+  },
+  {
+    "codigo": "PQ-201",
+    "titulo": "Impressão com faixas repetitivas",
+    "termos": [
+      "qualidade",
+      "faixas",
+      "fotocondutor",
+      "drum",
+      "itb"
+    ],
+    "descricao": "Defeitos visuais que indicam necessidade de limpeza, ajuste de mídia ou substituição de consumíveis.",
+    "causas": [
+      "Unidade de imagem/fotocondutor no fim de vida.",
+      "Régua/laser sujo ou com resíduos.",
+      "Tipo de papel inadequado (umidade/gramatura)."
+    ],
+    "solucoes": [
+      "Executar limpeza (régua/laser) conforme manual.",
+      "Rodar páginas de limpeza/calibração.",
+      "Substituir consumíveis no fim de vida (drum/ITB).",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O defeito se repete com um ciclo constante (x cm)?",
+      "O problema ocorre em todas as bandejas e mídias?",
+      "Acontece em todas as cores (equipamento colorido)?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 2
+  },
+  {
+    "codigo": "PQ-202",
+    "titulo": "Manchas/toner solto no papel",
+    "termos": [
+      "qualidade",
+      "manchas",
+      "toner",
+      "fixacao"
+    ],
+    "descricao": "Defeitos visuais que indicam necessidade de limpeza, ajuste de mídia ou substituição de consumíveis.",
+    "causas": [
+      "Unidade de imagem/fotocondutor no fim de vida.",
+      "Régua/laser sujo ou com resíduos.",
+      "Tipo de papel inadequado (umidade/gramatura)."
+    ],
+    "solucoes": [
+      "Executar limpeza (régua/laser) conforme manual.",
+      "Rodar páginas de limpeza/calibração.",
+      "Substituir consumíveis no fim de vida (drum/ITB).",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O defeito se repete com um ciclo constante (x cm)?",
+      "O problema ocorre em todas as bandejas e mídias?",
+      "Acontece em todas as cores (equipamento colorido)?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 2
+  },
+  {
+    "codigo": "PQ-203",
+    "titulo": "Impressão pálida/desbotada",
+    "termos": [
+      "qualidade",
+      "palida",
+      "desbotada",
+      "toner",
+      "laser"
+    ],
+    "descricao": "Defeitos visuais que indicam necessidade de limpeza, ajuste de mídia ou substituição de consumíveis.",
+    "causas": [
+      "Unidade de imagem/fotocondutor no fim de vida.",
+      "Régua/laser sujo ou com resíduos.",
+      "Tipo de papel inadequado (umidade/gramatura)."
+    ],
+    "solucoes": [
+      "Executar limpeza (régua/laser) conforme manual.",
+      "Rodar páginas de limpeza/calibração.",
+      "Substituir consumíveis no fim de vida (drum/ITB).",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O defeito se repete com um ciclo constante (x cm)?",
+      "O problema ocorre em todas as bandejas e mídias?",
+      "Acontece em todas as cores (equipamento colorido)?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 2
+  },
+  {
+    "codigo": "PQ-204",
+    "titulo": "Fundo escuro/cinza na página",
+    "termos": [
+      "qualidade",
+      "fundo escuro",
+      "sujidade",
+      "transfer"
+    ],
+    "descricao": "Defeitos visuais que indicam necessidade de limpeza, ajuste de mídia ou substituição de consumíveis.",
+    "causas": [
+      "Unidade de imagem/fotocondutor no fim de vida.",
+      "Régua/laser sujo ou com resíduos.",
+      "Tipo de papel inadequado (umidade/gramatura)."
+    ],
+    "solucoes": [
+      "Executar limpeza (régua/laser) conforme manual.",
+      "Rodar páginas de limpeza/calibração.",
+      "Substituir consumíveis no fim de vida (drum/ITB).",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O defeito se repete com um ciclo constante (x cm)?",
+      "O problema ocorre em todas as bandejas e mídias?",
+      "Acontece em todas as cores (equipamento colorido)?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 2
+  },
+  {
+    "codigo": "JAM-101",
+    "titulo": "Atolamento na entrada do papel (bandeja/ADF)",
+    "termos": [
+      "jam",
+      "atolamento",
+      "papel",
+      "sensor",
+      "adf",
+      "bandeja"
+    ],
+    "descricao": "O papel prende em pontos específicos do percurso. É necessário inspecionar sensores e roletes.",
+    "causas": [
+      "Papel fora de especificação (umidade/gramatura).",
+      "Rolos/retard desgastados.",
+      "Sensores sujos ou travados."
+    ],
+    "solucoes": [
+      "Remover resíduos e fragmentos no percurso.",
+      "Limpar sensores com pincel macio/álcool isopropílico.",
+      "Substituir rolos/retard quando necessário.",
+      "Ajustar tipo de papel no painel/driver.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O atolamento ocorre com papel específico?",
+      "É recorrente em cópia no ADF ou apenas impressão?",
+      "Os roletes foram substituídos recentemente?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 3
+  },
+  {
+    "codigo": "JAM-102",
+    "titulo": "Atolamento na saída/fixação",
+    "termos": [
+      "jam",
+      "atolamento",
+      "papel",
+      "sensor",
+      "adf",
+      "bandeja"
+    ],
+    "descricao": "O papel prende em pontos específicos do percurso. É necessário inspecionar sensores e roletes.",
+    "causas": [
+      "Papel fora de especificação (umidade/gramatura).",
+      "Rolos/retard desgastados.",
+      "Sensores sujos ou travados."
+    ],
+    "solucoes": [
+      "Remover resíduos e fragmentos no percurso.",
+      "Limpar sensores com pincel macio/álcool isopropílico.",
+      "Substituir rolos/retard quando necessário.",
+      "Ajustar tipo de papel no painel/driver.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O atolamento ocorre com papel específico?",
+      "É recorrente em cópia no ADF ou apenas impressão?",
+      "Os roletes foram substituídos recentemente?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 3
+  },
+  {
+    "codigo": "JAM-103",
+    "titulo": "Atolamento intermitente – sensor sujo",
+    "termos": [
+      "jam",
+      "atolamento",
+      "papel",
+      "sensor",
+      "adf",
+      "bandeja"
+    ],
+    "descricao": "O papel prende em pontos específicos do percurso. É necessário inspecionar sensores e roletes.",
+    "causas": [
+      "Papel fora de especificação (umidade/gramatura).",
+      "Rolos/retard desgastados.",
+      "Sensores sujos ou travados."
+    ],
+    "solucoes": [
+      "Remover resíduos e fragmentos no percurso.",
+      "Limpar sensores com pincel macio/álcool isopropílico.",
+      "Substituir rolos/retard quando necessário.",
+      "Ajustar tipo de papel no painel/driver.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "O atolamento ocorre com papel específico?",
+      "É recorrente em cópia no ADF ou apenas impressão?",
+      "Os roletes foram substituídos recentemente?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 2
+  },
+  {
+    "codigo": "ADF-301",
+    "titulo": "Linhas verticais na digitalização (ADF)",
+    "termos": [
+      "scanner",
+      "adf",
+      "linhas",
+      "skew",
+      "digitalizacao"
+    ],
+    "descricao": "Anomalias comuns na aquisição de imagem por ADF/vidro plano.",
+    "causas": [
+      "Vidro estreito do ADF sujo ou riscado.",
+      "Guias do ADF desalinhadas.",
+      "CIS/CCD com resíduos."
+    ],
+    "solucoes": [
+      "Limpar o vidro do ADF (faixa estreita) e o vidro principal.",
+      "Ajustar as guias de entrada do ADF.",
+      "Testar no vidro plano para comparação.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "No vidro plano, a linha/sombra desaparece?",
+      "O desalinhamento ocorre em todas as resoluções?",
+      "Foi feita limpeza com pano sem fiapos?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 2
+  },
+  {
+    "codigo": "ADF-302",
+    "titulo": "Sombra/recorte na borda ao digitalizar",
+    "termos": [
+      "scanner",
+      "adf",
+      "linhas",
+      "skew",
+      "digitalizacao"
+    ],
+    "descricao": "Anomalias comuns na aquisição de imagem por ADF/vidro plano.",
+    "causas": [
+      "Vidro estreito do ADF sujo ou riscado.",
+      "Guias do ADF desalinhadas.",
+      "CIS/CCD com resíduos."
+    ],
+    "solucoes": [
+      "Limpar o vidro do ADF (faixa estreita) e o vidro principal.",
+      "Ajustar as guias de entrada do ADF.",
+      "Testar no vidro plano para comparação.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "No vidro plano, a linha/sombra desaparece?",
+      "O desalinhamento ocorre em todas as resoluções?",
+      "Foi feita limpeza com pano sem fiapos?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 2
+  },
+  {
+    "codigo": "SCAN-303",
+    "titulo": "Digitalização torta/desalinhada (skew)",
+    "termos": [
+      "scanner",
+      "adf",
+      "linhas",
+      "skew",
+      "digitalizacao"
+    ],
+    "descricao": "Anomalias comuns na aquisição de imagem por ADF/vidro plano.",
+    "causas": [
+      "Vidro estreito do ADF sujo ou riscado.",
+      "Guias do ADF desalinhadas.",
+      "CIS/CCD com resíduos."
+    ],
+    "solucoes": [
+      "Limpar o vidro do ADF (faixa estreita) e o vidro principal.",
+      "Ajustar as guias de entrada do ADF.",
+      "Testar no vidro plano para comparação.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "No vidro plano, a linha/sombra desaparece?",
+      "O desalinhamento ocorre em todas as resoluções?",
+      "Foi feita limpeza com pano sem fiapos?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 2
+  },
+  {
+    "codigo": "NET-401",
+    "titulo": "Impressora offline/sem comunicação (rede)",
+    "termos": [
+      "rede",
+      "offline",
+      "ip",
+      "spooler",
+      "ping",
+      "driver"
+    ],
+    "descricao": "Estação ou servidor não conseguem se comunicar de forma estável com a impressora.",
+    "causas": [
+      "Cabo de rede danificado ou desconectado.",
+      "IP incorreto ou conflito de rede.",
+      "Serviço de spooler travado no Windows."
+    ],
+    "solucoes": [
+      "Testar ping e verificação do IP no painel/relatório.",
+      "Conferir cabo/rede e porta do switch.",
+      "Reiniciar o serviço de spooler e reinstalar o driver se necessário.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "A impressora responde a ping pelo IP configurado?",
+      "O problema ocorre em todas as estações?",
+      "Houve alteração recente na rede (DHCP/roteador)?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 3
+  },
+  {
+    "codigo": "NET-402",
+    "titulo": "Conflito de IP/double NAT",
+    "termos": [
+      "rede",
+      "offline",
+      "ip",
+      "spooler",
+      "ping",
+      "driver"
+    ],
+    "descricao": "Estação ou servidor não conseguem se comunicar de forma estável com a impressora.",
+    "causas": [
+      "Cabo de rede danificado ou desconectado.",
+      "IP incorreto ou conflito de rede.",
+      "Serviço de spooler travado no Windows."
+    ],
+    "solucoes": [
+      "Testar ping e verificação do IP no painel/relatório.",
+      "Conferir cabo/rede e porta do switch.",
+      "Reiniciar o serviço de spooler e reinstalar o driver se necessário.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "A impressora responde a ping pelo IP configurado?",
+      "O problema ocorre em todas as estações?",
+      "Houve alteração recente na rede (DHCP/roteador)?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 3
+  },
+  {
+    "codigo": "NET-403",
+    "titulo": "Spooler travado na estação do usuário",
+    "termos": [
+      "rede",
+      "offline",
+      "ip",
+      "spooler",
+      "ping",
+      "driver"
+    ],
+    "descricao": "Estação ou servidor não conseguem se comunicar de forma estável com a impressora.",
+    "causas": [
+      "Cabo de rede danificado ou desconectado.",
+      "IP incorreto ou conflito de rede.",
+      "Serviço de spooler travado no Windows."
+    ],
+    "solucoes": [
+      "Testar ping e verificação do IP no painel/relatório.",
+      "Conferir cabo/rede e porta do switch.",
+      "Reiniciar o serviço de spooler e reinstalar o driver se necessário.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "A impressora responde a ping pelo IP configurado?",
+      "O problema ocorre em todas as estações?",
+      "Houve alteração recente na rede (DHCP/roteador)?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 2
+  },
+  {
+    "codigo": "KIT-RESET",
+    "titulo": "Reset de kit de manutenção",
+    "termos": [
+      "manutencao",
+      "kit",
+      "reset",
+      "contador",
+      "drum",
+      "waste"
+    ],
+    "descricao": "Necessidade de reiniciar contadores de manutenção após substituição de peças.",
+    "causas": [
+      "Contador não foi resetado após a troca.",
+      "Firmware não reconheceu o novo kit/unidade de imagem."
+    ],
+    "solucoes": [
+      "Acessar modo de serviço e executar o reset do contador correspondente.",
+      "Validar versão de firmware e aplicar atualização se disponível.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "A peça foi efetivamente substituída?",
+      "O contador exibe valores consistentes após o reset?",
+      "Qual a versão do firmware atual?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 2
+  },
+  {
+    "codigo": "DRUM-RESET",
+    "titulo": "Reset de unidade de imagem/fotocondutor",
+    "termos": [
+      "manutencao",
+      "kit",
+      "reset",
+      "contador",
+      "drum",
+      "waste"
+    ],
+    "descricao": "Necessidade de reiniciar contadores de manutenção após substituição de peças.",
+    "causas": [
+      "Contador não foi resetado após a troca.",
+      "Firmware não reconheceu o novo kit/unidade de imagem."
+    ],
+    "solucoes": [
+      "Acessar modo de serviço e executar o reset do contador correspondente.",
+      "Validar versão de firmware e aplicar atualização se disponível.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "A peça foi efetivamente substituída?",
+      "O contador exibe valores consistentes após o reset?",
+      "Qual a versão do firmware atual?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 2
+  },
+  {
+    "codigo": "WASTE-101",
+    "titulo": "Toner residual cheio – substituir garrafa/recipiente",
+    "termos": [
+      "manutencao",
+      "kit",
+      "reset",
+      "contador",
+      "drum",
+      "waste"
+    ],
+    "descricao": "Necessidade de reiniciar contadores de manutenção após substituição de peças.",
+    "causas": [
+      "Contador não foi resetado após a troca.",
+      "Firmware não reconheceu o novo kit/unidade de imagem."
+    ],
+    "solucoes": [
+      "Acessar modo de serviço e executar o reset do contador correspondente.",
+      "Validar versão de firmware e aplicar atualização se disponível.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "A peça foi efetivamente substituída?",
+      "O contador exibe valores consistentes após o reset?",
+      "Qual a versão do firmware atual?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 3
+  },
+  {
+    "codigo": "USB-101",
+    "titulo": "Sem comunicação via USB",
+    "termos": [
+      "usb",
+      "driver",
+      "comunicacao",
+      "porta",
+      "cabo"
+    ],
+    "descricao": "Falhas de comunicação local na conexão USB.",
+    "causas": [
+      "Cabo USB defeituoso ou muito longo.",
+      "Driver incorreto ou corrompido.",
+      "Porta USB instável (hub sem alimentação)."
+    ],
+    "solucoes": [
+      "Trocar o cabo USB e testar porta diferente.",
+      "Reinstalar o driver adequado ao modelo/sistema.",
+      "Evitar hubs passivos; conectar direto no computador.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "A impressora foi reconhecida pelo SO?",
+      "O problema ocorre em todos os computadores?",
+      "Houve alteração recente no driver/SO?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 2
+  },
+  {
+    "codigo": "USB-102",
+    "titulo": "Driver incorreto no Windows/macOS",
+    "termos": [
+      "usb",
+      "driver",
+      "comunicacao",
+      "porta",
+      "cabo"
+    ],
+    "descricao": "Falhas de comunicação local na conexão USB.",
+    "causas": [
+      "Cabo USB defeituoso ou muito longo.",
+      "Driver incorreto ou corrompido.",
+      "Porta USB instável (hub sem alimentação)."
+    ],
+    "solucoes": [
+      "Trocar o cabo USB e testar porta diferente.",
+      "Reinstalar o driver adequado ao modelo/sistema.",
+      "Evitar hubs passivos; conectar direto no computador.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "A impressora foi reconhecida pelo SO?",
+      "O problema ocorre em todos os computadores?",
+      "Houve alteração recente no driver/SO?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 2
+  },
+  {
+    "codigo": "33.00",
+    "titulo": "Erro 33.xx (Kyocera) – sensores de papel/transferência",
+    "termos": [
+      "kyocera",
+      "33.xx",
+      "sensor",
+      "papel",
+      "transferencia"
+    ],
+    "descricao": "Código genérico relacionado a sensores do caminho do papel ou unidade de transferência.",
+    "causas": [
+      "Sensor do percurso sujo/travado.",
+      "Cabos/conectores com mau contato.",
+      "Unidade de transferência com defeito."
+    ],
+    "solucoes": [
+      "Limpar sensores e verificar cabos.",
+      "Reassentar conectores e testar novamente.",
+      "Substituir a unidade associada se persistir o erro.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "Em qual etapa do percurso o papel para?",
+      "O erro ocorre em todas as bandejas?",
+      "Há ruídos anormais durante a impressão?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 3
+  },
+  {
+    "codigo": "33.01",
+    "titulo": "Erro 33.xx (Kyocera) – sensores de papel/transferência",
+    "termos": [
+      "kyocera",
+      "33.xx",
+      "sensor",
+      "papel",
+      "transferencia"
+    ],
+    "descricao": "Código genérico relacionado a sensores do caminho do papel ou unidade de transferência.",
+    "causas": [
+      "Sensor do percurso sujo/travado.",
+      "Cabos/conectores com mau contato.",
+      "Unidade de transferência com defeito."
+    ],
+    "solucoes": [
+      "Limpar sensores e verificar cabos.",
+      "Reassentar conectores e testar novamente.",
+      "Substituir a unidade associada se persistir o erro.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "Em qual etapa do percurso o papel para?",
+      "O erro ocorre em todas as bandejas?",
+      "Há ruídos anormais durante a impressão?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 3
+  },
+  {
+    "codigo": "33.02",
+    "titulo": "Erro 33.xx (Kyocera) – sensores de papel/transferência",
+    "termos": [
+      "kyocera",
+      "33.xx",
+      "sensor",
+      "papel",
+      "transferencia"
+    ],
+    "descricao": "Código genérico relacionado a sensores do caminho do papel ou unidade de transferência.",
+    "causas": [
+      "Sensor do percurso sujo/travado.",
+      "Cabos/conectores com mau contato.",
+      "Unidade de transferência com defeito."
+    ],
+    "solucoes": [
+      "Limpar sensores e verificar cabos.",
+      "Reassentar conectores e testar novamente.",
+      "Substituir a unidade associada se persistir o erro.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "Em qual etapa do percurso o papel para?",
+      "O erro ocorre em todas as bandejas?",
+      "Há ruídos anormais durante a impressão?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 3
+  },
+  {
+    "codigo": "33.03",
+    "titulo": "Erro 33.xx (Kyocera) – sensores de papel/transferência",
+    "termos": [
+      "kyocera",
+      "33.xx",
+      "sensor",
+      "papel",
+      "transferencia"
+    ],
+    "descricao": "Código genérico relacionado a sensores do caminho do papel ou unidade de transferência.",
+    "causas": [
+      "Sensor do percurso sujo/travado.",
+      "Cabos/conectores com mau contato.",
+      "Unidade de transferência com defeito."
+    ],
+    "solucoes": [
+      "Limpar sensores e verificar cabos.",
+      "Reassentar conectores e testar novamente.",
+      "Substituir a unidade associada se persistir o erro.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "Em qual etapa do percurso o papel para?",
+      "O erro ocorre em todas as bandejas?",
+      "Há ruídos anormais durante a impressão?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 3
+  },
+  {
+    "codigo": "33.04",
+    "titulo": "Erro 33.xx (Kyocera) – sensores de papel/transferência",
+    "termos": [
+      "kyocera",
+      "33.xx",
+      "sensor",
+      "papel",
+      "transferencia"
+    ],
+    "descricao": "Código genérico relacionado a sensores do caminho do papel ou unidade de transferência.",
+    "causas": [
+      "Sensor do percurso sujo/travado.",
+      "Cabos/conectores com mau contato.",
+      "Unidade de transferência com defeito."
+    ],
+    "solucoes": [
+      "Limpar sensores e verificar cabos.",
+      "Reassentar conectores e testar novamente.",
+      "Substituir a unidade associada se persistir o erro.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "Em qual etapa do percurso o papel para?",
+      "O erro ocorre em todas as bandejas?",
+      "Há ruídos anormais durante a impressão?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 3
+  },
+  {
+    "codigo": "33.05",
+    "titulo": "Erro 33.xx (Kyocera) – sensores de papel/transferência",
+    "termos": [
+      "kyocera",
+      "33.xx",
+      "sensor",
+      "papel",
+      "transferencia"
+    ],
+    "descricao": "Código genérico relacionado a sensores do caminho do papel ou unidade de transferência.",
+    "causas": [
+      "Sensor do percurso sujo/travado.",
+      "Cabos/conectores com mau contato.",
+      "Unidade de transferência com defeito."
+    ],
+    "solucoes": [
+      "Limpar sensores e verificar cabos.",
+      "Reassentar conectores e testar novamente.",
+      "Substituir a unidade associada se persistir o erro.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "Em qual etapa do percurso o papel para?",
+      "O erro ocorre em todas as bandejas?",
+      "Há ruídos anormais durante a impressão?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 3
+  },
+  {
+    "codigo": "33.06",
+    "titulo": "Erro 33.xx (Kyocera) – sensores de papel/transferência",
+    "termos": [
+      "kyocera",
+      "33.xx",
+      "sensor",
+      "papel",
+      "transferencia"
+    ],
+    "descricao": "Código genérico relacionado a sensores do caminho do papel ou unidade de transferência.",
+    "causas": [
+      "Sensor do percurso sujo/travado.",
+      "Cabos/conectores com mau contato.",
+      "Unidade de transferência com defeito."
+    ],
+    "solucoes": [
+      "Limpar sensores e verificar cabos.",
+      "Reassentar conectores e testar novamente.",
+      "Substituir a unidade associada se persistir o erro.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "Em qual etapa do percurso o papel para?",
+      "O erro ocorre em todas as bandejas?",
+      "Há ruídos anormais durante a impressão?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 3
+  },
+  {
+    "codigo": "33.07",
+    "titulo": "Erro 33.xx (Kyocera) – sensores de papel/transferência",
+    "termos": [
+      "kyocera",
+      "33.xx",
+      "sensor",
+      "papel",
+      "transferencia"
+    ],
+    "descricao": "Código genérico relacionado a sensores do caminho do papel ou unidade de transferência.",
+    "causas": [
+      "Sensor do percurso sujo/travado.",
+      "Cabos/conectores com mau contato.",
+      "Unidade de transferência com defeito."
+    ],
+    "solucoes": [
+      "Limpar sensores e verificar cabos.",
+      "Reassentar conectores e testar novamente.",
+      "Substituir a unidade associada se persistir o erro.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "Em qual etapa do percurso o papel para?",
+      "O erro ocorre em todas as bandejas?",
+      "Há ruídos anormais durante a impressão?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 3
+  },
+  {
+    "codigo": "33.08",
+    "titulo": "Erro 33.xx (Kyocera) – sensores de papel/transferência",
+    "termos": [
+      "kyocera",
+      "33.xx",
+      "sensor",
+      "papel",
+      "transferencia"
+    ],
+    "descricao": "Código genérico relacionado a sensores do caminho do papel ou unidade de transferência.",
+    "causas": [
+      "Sensor do percurso sujo/travado.",
+      "Cabos/conectores com mau contato.",
+      "Unidade de transferência com defeito."
+    ],
+    "solucoes": [
+      "Limpar sensores e verificar cabos.",
+      "Reassentar conectores e testar novamente.",
+      "Substituir a unidade associada se persistir o erro.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "Em qual etapa do percurso o papel para?",
+      "O erro ocorre em todas as bandejas?",
+      "Há ruídos anormais durante a impressão?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 3
+  },
+  {
+    "codigo": "33.09",
+    "titulo": "Erro 33.xx (Kyocera) – sensores de papel/transferência",
+    "termos": [
+      "kyocera",
+      "33.xx",
+      "sensor",
+      "papel",
+      "transferencia"
+    ],
+    "descricao": "Código genérico relacionado a sensores do caminho do papel ou unidade de transferência.",
+    "causas": [
+      "Sensor do percurso sujo/travado.",
+      "Cabos/conectores com mau contato.",
+      "Unidade de transferência com defeito."
+    ],
+    "solucoes": [
+      "Limpar sensores e verificar cabos.",
+      "Reassentar conectores e testar novamente.",
+      "Substituir a unidade associada se persistir o erro.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "Em qual etapa do percurso o papel para?",
+      "O erro ocorre em todas as bandejas?",
+      "Há ruídos anormais durante a impressão?"
+    ],
+    "nivel": "N1",
+    "procedimento_link": null,
+    "criticidade": 3
+  },
+  {
+    "codigo": "FAX-101",
+    "titulo": "Falha ao enviar/receber fax",
+    "termos": [
+      "fax",
+      "linha",
+      "analoga",
+      "rj11"
+    ],
+    "descricao": "Anomalia operacional observada no uso cotidiano. Requer validação de configuração e ambiente.",
+    "causas": [
+      "Configuração incorreta do recurso correspondente.",
+      "Drivers/firmware desatualizados.",
+      "Componentes ou rede em instabilidade."
+    ],
+    "solucoes": [
+      "Revisar configuração passo a passo.",
+      "Atualizar drivers/firmware e reiniciar.",
+      "Isolar variáveis testando em outro computador/rede.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "Quando começou a falha?",
+      "O problema ocorre com todos os usuários/dispositivos?",
+      "Há logs adicionais no painel/relatórios?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 2
+  },
+  {
+    "codigo": "WIFI-201",
+    "titulo": "Oscilação na conexão Wi‑Fi",
+    "termos": [
+      "wifi",
+      "wireless",
+      "ssid",
+      "sinal"
+    ],
+    "descricao": "Anomalia operacional observada no uso cotidiano. Requer validação de configuração e ambiente.",
+    "causas": [
+      "Configuração incorreta do recurso correspondente.",
+      "Drivers/firmware desatualizados.",
+      "Componentes ou rede em instabilidade."
+    ],
+    "solucoes": [
+      "Revisar configuração passo a passo.",
+      "Atualizar drivers/firmware e reiniciar.",
+      "Isolar variáveis testando em outro computador/rede.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "Quando começou a falha?",
+      "O problema ocorre com todos os usuários/dispositivos?",
+      "Há logs adicionais no painel/relatórios?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 2
+  },
+  {
+    "codigo": "PCL-602",
+    "titulo": "Impressão com caracteres estranhos (PCL)",
+    "termos": [
+      "pcl",
+      "driver",
+      "encoding"
+    ],
+    "descricao": "Anomalia operacional observada no uso cotidiano. Requer validação de configuração e ambiente.",
+    "causas": [
+      "Configuração incorreta do recurso correspondente.",
+      "Drivers/firmware desatualizados.",
+      "Componentes ou rede em instabilidade."
+    ],
+    "solucoes": [
+      "Revisar configuração passo a passo.",
+      "Atualizar drivers/firmware e reiniciar.",
+      "Isolar variáveis testando em outro computador/rede.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "Quando começou a falha?",
+      "O problema ocorre com todos os usuários/dispositivos?",
+      "Há logs adicionais no painel/relatórios?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 2
+  },
+  {
+    "codigo": "PS-603",
+    "titulo": "Erro de interpretação PostScript",
+    "termos": [
+      "postscript",
+      "ps",
+      "driver"
+    ],
+    "descricao": "Anomalia operacional observada no uso cotidiano. Requer validação de configuração e ambiente.",
+    "causas": [
+      "Configuração incorreta do recurso correspondente.",
+      "Drivers/firmware desatualizados.",
+      "Componentes ou rede em instabilidade."
+    ],
+    "solucoes": [
+      "Revisar configuração passo a passo.",
+      "Atualizar drivers/firmware e reiniciar.",
+      "Isolar variáveis testando em outro computador/rede.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "Quando começou a falha?",
+      "O problema ocorre com todos os usuários/dispositivos?",
+      "Há logs adicionais no painel/relatórios?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 2
+  },
+  {
+    "codigo": "MEM-701",
+    "titulo": "Baixa memória – trabalhos grandes falham",
+    "termos": [
+      "memoria",
+      "spool",
+      "a3",
+      "pdf"
+    ],
+    "descricao": "Anomalia operacional observada no uso cotidiano. Requer validação de configuração e ambiente.",
+    "causas": [
+      "Configuração incorreta do recurso correspondente.",
+      "Drivers/firmware desatualizados.",
+      "Componentes ou rede em instabilidade."
+    ],
+    "solucoes": [
+      "Revisar configuração passo a passo.",
+      "Atualizar drivers/firmware e reiniciar.",
+      "Isolar variáveis testando em outro computador/rede.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "Quando começou a falha?",
+      "O problema ocorre com todos os usuários/dispositivos?",
+      "Há logs adicionais no painel/relatórios?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 3
+  },
+  {
+    "codigo": "COL-801",
+    "titulo": "Desalinhamento de cores (calibração)",
+    "termos": [
+      "calibracao",
+      "cores",
+      "itb"
+    ],
+    "descricao": "Anomalia operacional observada no uso cotidiano. Requer validação de configuração e ambiente.",
+    "causas": [
+      "Configuração incorreta do recurso correspondente.",
+      "Drivers/firmware desatualizados.",
+      "Componentes ou rede em instabilidade."
+    ],
+    "solucoes": [
+      "Revisar configuração passo a passo.",
+      "Atualizar drivers/firmware e reiniciar.",
+      "Isolar variáveis testando em outro computador/rede.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "Quando começou a falha?",
+      "O problema ocorre com todos os usuários/dispositivos?",
+      "Há logs adicionais no painel/relatórios?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 2
+  },
+  {
+    "codigo": "TRAY-901",
+    "titulo": "Detecção incorreta do tipo de mídia",
+    "termos": [
+      "bandeja",
+      "tipo de papel",
+      "gramatura"
+    ],
+    "descricao": "Anomalia operacional observada no uso cotidiano. Requer validação de configuração e ambiente.",
+    "causas": [
+      "Configuração incorreta do recurso correspondente.",
+      "Drivers/firmware desatualizados.",
+      "Componentes ou rede em instabilidade."
+    ],
+    "solucoes": [
+      "Revisar configuração passo a passo.",
+      "Atualizar drivers/firmware e reiniciar.",
+      "Isolar variáveis testando em outro computador/rede.",
+      "Caso não seja possível resolver remotamente, enviar para AT."
+    ],
+    "perguntas": [
+      "Quando começou a falha?",
+      "O problema ocorre com todos os usuários/dispositivos?",
+      "Há logs adicionais no painel/relatórios?"
+    ],
+    "nivel": "atendente",
+    "procedimento_link": null,
+    "criticidade": 2
+  }
+]
