@@ -15,3 +15,9 @@ Thumbs.db
 
 # Arquivos de ambiente
 .env
+
+# IDE JetBrains
+.idea/
+
+# Arquivos XML da IDE 
+workspace.xml
